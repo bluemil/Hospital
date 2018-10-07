@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            height: 159px;
+            width: 465px;
+        }
+        .style3
+        {
+            height: 159px;
+            width: 221px;
+        }
+        .style4
+        {
+            height: 110px;
+            width: 221px;
+        }
+        .style5
+        {
+            height: 110px;
+            width: 465px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 100%;">
+            <tr bgcolor="#003366">
+            
+             <td class="style3">
+                    &nbsp;&nbsp;
+                    <img alt="" src="Slike/100px-Vojna_bolnica_Niš,logo.jpg" 
+                        style="height: 138px; width: 155px; margin-top: 3px;" /></td>
+                <td class="style2" > 
+                    <center style="font-family: Arial, Helvetica, sans-serif; font-size: larger; font-weight: bold; font-style: normal; color: #FFFFFF"> Bolnica </center>>
+                <img alt="" src="Slike/dubrava_bolnica_290308_1233298072.jpg" 
+                        style="height: 117px; width: 956px; margin-left: 0px; margin-top: 0px;"/>
+                       
+                    &nbsp;
+                </td>
+               
+                
+            </tr>
+            <tr>
+                <td class="style4" bgcolor="#003366">
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" /> 
+                    &nbsp;<asp:Menu ID="Menu1" runat="server" DataSourceID ="SiteMapDataSource1" 
+                        ForeColor="Black">
+                    </asp:Menu>
+                </td>
+                <td class="style5" bgcolor="#E1EFFF">
+                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder> &nbsp;
+                </td>
+                
+            </tr>
+            <tr bgcolor="#003366">
+                <td colspan="2" > <center style="color: #FFFFFF" > <br /><br /><br />Milica Radovanov, R506/12</center>>
+                    &nbsp;
+                </td>
+               
+            </tr>
+        </table>
+      
+    </div>
+    </form>
+</body>
+</html>
